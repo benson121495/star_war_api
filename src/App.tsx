@@ -8,7 +8,7 @@ function App() {
 
   const [characterApp, setcharacterApp] = useState<any>([]);
   const [errormessageApp, seterrormessageApp] = useState<string | undefined>();
-
+  const x = Math.floor(Math.random()*81);
   const fetchACharacter = async (id: number) => {
 
     try {
@@ -39,7 +39,7 @@ function App() {
 
   };
 
-  useEffect(() => { fetchACharacter(1) }, []);
+  useEffect(() => { fetchACharacter(x) }, []);
 
   return (
 
